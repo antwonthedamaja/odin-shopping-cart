@@ -1,10 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import {Routes, Route} from 'react-router-dom';
 import '../style/app.css'
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Routes>
+      {/* <Route path="/" element={<Home />} /> */}
+      <Route />
+    </Routes>
   );
 }
 

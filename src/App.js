@@ -3,16 +3,15 @@ import {Routes, Route, BrowserRouter} from 'react-router-dom';
 import Nav from './component/Nav';
 import './style/App.css';
 
-function App() {
+export default function App() {
   const total = '0';
   return (
     <BrowserRouter>
       <Nav total={total}/>
       <Routes>
-        <Route path="/" element={<div></div>} />
+        <Route path="/" element={<div>Hi</div>} />
+        <Route path="/shop" element={<div>Shop</div>} />
       </Routes>
     </BrowserRouter>
   );
 }
-
-export default App;

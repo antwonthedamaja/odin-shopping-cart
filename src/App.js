@@ -1,13 +1,17 @@
 import React from 'react';
-import {Routes, Route} from 'react-router-dom';
-import '../style/app.css'
+import {Routes, Route, BrowserRouter} from 'react-router-dom';
+import Nav from './component/Nav';
+import './style/App.css';
 
 function App() {
+  const total = '0';
   return (
-    <Routes>
-      {/* <Route path="/" element={<Home />} /> */}
-      <Route />
-    </Routes>
+    <BrowserRouter>
+      <Nav total={total}/>
+      <Routes>
+        <Route path="/" element={<div></div>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

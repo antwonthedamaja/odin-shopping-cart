@@ -1,0 +1,18 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 5rem;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+#hook {
+    font-size: 5rem;
+}
+
+main > div:last-child {
+    margin-top: 2rem;
+}

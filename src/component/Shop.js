@@ -1,22 +1,33 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
 import React from 'react';
 import '../style/Shop.css';
 
-const fish = 'Fish';
-const trash = 'Trash';
-const annoying = 'Annoying kid';
-const karen = 'Karen';
-const question = 'Question mark guy';
-const anime = 'Anime girl';
+export default function Shop(props) {
 
-const array = [fish, trash, annoying, karen, question, anime];
+    function increaseAmount(e) {
+        const clone = structuredClone(props.list);
+        console.log(clone);
+        clone[e.target.attributes.name].amount++;
+        props.setList(clone);
+    }
 
-export default function Shop() {
+    function decreaseAmount(e) {
+        console.log(e);
+    }
+
     return (
         <section>
-            {array.map(item => {
+            {props.list.map(item => {
                 return <div className='card'>
-                    
+                    <img src={item.img} />
+                    <div>{item.txt}</div>
+                    <div>${item.price.toFixed(2)}</div>
+                    <div className='panel'>
+                        <div name={item.name} onClick={decreaseAmount}>-</div>
+                        <div className='amount'>{item.amount}</div>
+                        <div name={item.name} onClick={increaseAmount}>+</div>
+                    </div>
                 </div>;
             })}
         </section>

@@ -13,7 +13,8 @@ const fish = {
   txt: 'Fish',
   price: Math.random() * 499,
   amount: 0,
-  img: fishImg
+  img: fishImg,
+  index: 0
 };
 
 const trash = {
@@ -21,7 +22,8 @@ const trash = {
   txt: 'Trashman',
   price: Math.random() * 499,
   amount: 0,
-  img: trashImg
+  img: trashImg,
+  index: 1
 };
 
 const anime = {
@@ -29,21 +31,38 @@ const anime = {
   txt: 'Cute anime boy',
   price: Math.random() * 899,
   amount: 0,
-  img: animeImg
+  img: animeImg,
+  index: 2
 };
 
 const array = [fish, trash, anime];
 
 export default function App() {
   const [list, setList] = useState(array);
-  const total = '0.00';
+  const [total, setTotal] = useState('0.00');
+
+  function changeAmount(index, op) {
+    if (list[index].amount <= 0 && op === 'neg') {
+      return;
+    }
+    const clone = structuredClone(list);
+    if (op === 'pos') {
+      clone[index].amount++;
+    } else {
+      clone[index].amount--;
+    }
+    setTotal(((clone[0].price * clone[0].amount) 
+    + (clone[1].price * clone[1].amount)
+    + (clone[2].price * clone[2].amount)).toFixed(2));
+    setList(clone);
+  }
 
   return (
     <BrowserRouter>
       <Nav total={total}/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop list={list} setList={setList} />} />
+        <Route path="/shop" element={<Shop list={list} changeAmount={changeAmount} />} />
       </Routes>
     </BrowserRouter>
   );

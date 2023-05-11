@@ -24,7 +24,7 @@ img {
 
 .panel {
     display: flex;
-    gap: .25rem;
+    gap: .3rem;
 }
 
 .panel > div:first-child, .panel > div:last-child {

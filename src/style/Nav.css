@@ -1,11 +1,16 @@
 header {
     background-color: #2563eb;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 5rem;
     padding: 1rem;
     box-sizing: border-box;
+    align-items: center;
+}
+
+header > div:first-child {
+    margin-right: auto;
+    visibility: hidden;
+    width: 10rem;
 }
 
 nav {
@@ -29,4 +34,17 @@ a:visited {
 
 header > div:last-child {
     font-size: 1.25rem;
+}
+
+#icons {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 700;
+    width: 10rem;
+    margin-left: auto;
+}
+
+header img {
+    width: 2rem;
 }

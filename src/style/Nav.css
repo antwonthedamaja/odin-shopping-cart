@@ -10,7 +10,7 @@ header {
 header > div:first-child {
     margin-right: auto;
     visibility: hidden;
-    width: 10rem;
+    width: 15rem;
 }
 
 nav {
@@ -19,7 +19,7 @@ nav {
     gap: 3rem;
 }
 
-a {
+nav > a {
     font-size: 2rem;
     font-weight: 700;
 }
@@ -32,19 +32,36 @@ a:visited {
     color: #f43f5e;
 }
 
-header > div:last-child {
-    font-size: 1.25rem;
-}
-
 #icons {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    justify-content: flex-end;
+    gap: 1rem;
     font-weight: 700;
-    width: 10rem;
+    width: 15rem;
     margin-left: auto;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 header img {
     width: 2rem;
+}
+
+aside {
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    width: 300px;
+    height: 200vh;
+    transition: .5s;
+    background-color: rgb(228, 233, 237);
+}
+
+.active {
+    right: 0px;
+}
+
+#icons > * {
+    pointer-events: none;
 }

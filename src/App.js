@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Nav from './component/Nav';
 import './style/App.css';
@@ -11,7 +11,7 @@ import animeImg from './assets/cute_anime_boy.png';
 const fish = {
   name: 'fish',
   txt: 'Fish',
-  price: Math.random() * 499,
+  price: Math.random() * 199,
   amount: 0,
   img: fishImg,
   index: 0
@@ -20,7 +20,7 @@ const fish = {
 const trash = {
   name: 'trash',
   txt: 'Trashman',
-  price: Math.random() * 499,
+  price: Math.random() * 299,
   amount: 0,
   img: trashImg,
   index: 1
@@ -29,7 +29,7 @@ const trash = {
 const anime = {
   name: 'anime',
   txt: 'Cute anime boy',
-  price: Math.random() * 899,
+  price: Math.random() * 599,
   amount: 0,
   img: animeImg,
   index: 2
@@ -40,6 +40,14 @@ const array = [fish, trash, anime];
 export default function App() {
   const [list, setList] = useState(array);
   const [total, setTotal] = useState('0.00');
+
+  useEffect(() => {
+    window.addEventListener('click', (e) => {
+      if (e.target.nodeName !== 'ASIDE') {
+        document.querySelector('aside').classList.remove('active');
+      }
+    });
+  }, []);  
 
   function changeAmount(index, op) {
     if (list[index].amount <= 0 && op === 'neg') {

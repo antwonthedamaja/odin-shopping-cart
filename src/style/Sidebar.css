@@ -1,0 +1,48 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 3rem 2.5rem;
+}
+
+aside * {
+    pointer-events: none;
+}
+
+aside > div:first-child {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#cart-items {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item-in-cart {
+    display: flex;
+}
+
+.item-in-cart img {
+    height: 7rem;
+    width: 7rem;
+}
+
+.item-in-cart > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0rem .5rem;
+}
+
+#cart-total {
+    margin-top: .5rem;
+    align-self: center;
+    font-weight: 700;
+}
+
+#purchase {
+    pointer-events: initial;
+}

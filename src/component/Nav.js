@@ -3,10 +3,12 @@ import React from 'react';
 import '../style/Nav.css';
 import { Link } from 'react-router-dom';
 import cartIcon from '../assets/cart-variant.svg';
+import Sidebar from './Sidebar';
 
 export default function Nav(props) {
+
     function showAside() {
-        setTimeout(() => document.querySelector('aside').classList.toggle('active'), 150);
+        setTimeout(() => document.querySelector('aside').classList.toggle('active'), 25);
     }
 
     return (
@@ -20,9 +22,7 @@ export default function Nav(props) {
                 <div>Total: ${props.total}</div>
                 <img src={cartIcon}/>
             </div>
-            <aside>
-
-            </aside>
+            <Sidebar list={props.list} total={props.total}/>
         </header>
     );
 }

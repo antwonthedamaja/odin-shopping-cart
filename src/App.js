@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import Nav from './component/Nav';
 import './style/App.css';
 import Home from './component/Home';
@@ -11,7 +11,7 @@ import animeImg from './assets/cute_anime_boy.png';
 const fish = {
   name: 'fish',
   txt: 'Fish',
-  price: Math.random() * 199,
+  price: Math.random() * 99,
   amount: 0,
   img: fishImg,
   index: 0
@@ -20,7 +20,7 @@ const fish = {
 const trash = {
   name: 'trash',
   txt: 'Trashman',
-  price: Math.random() * 299,
+  price: Math.random() * 99 + 100,
   amount: 0,
   img: trashImg,
   index: 1
@@ -29,7 +29,7 @@ const trash = {
 const anime = {
   name: 'anime',
   txt: 'Cute anime boy',
-  price: Math.random() * 599,
+  price: Math.random() * 499 + 200,
   amount: 0,
   img: animeImg,
   index: 2
@@ -66,12 +66,12 @@ export default function App() {
   }
 
   return (
-    <BrowserRouter>
-      <Nav total={total}/>
+    <HashRouter>
+      <Nav list={list} total={total}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop list={list} changeAmount={changeAmount} />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/odin-shopping-carts/static/css/main.0a0d68ca.css",
-    "main.js": "/odin-shopping-carts/static/js/main.177d5839.js",
-    "static/media/cute_anime_boy.png": "/odin-shopping-carts/static/media/cute_anime_boy.c7ac324d682c784e56e8.png",
-    "static/media/trashman.jpg": "/odin-shopping-carts/static/media/trashman.bb0a9fd4e706cfde19aa.jpg",
-    "static/media/fish.jpg": "/odin-shopping-carts/static/media/fish.02a78bc70db731806a57.jpg",
-    "index.html": "/odin-shopping-carts/index.html",
-    "static/media/cart-variant.svg": "/odin-shopping-carts/static/media/cart-variant.4350e3df540c25223d9fb315e4f4a23e.svg",
-    "main.0a0d68ca.css.map": "/odin-shopping-carts/static/css/main.0a0d68ca.css.map",
-    "main.177d5839.js.map": "/odin-shopping-carts/static/js/main.177d5839.js.map"
+    "main.css": "/odin-shopping-cart/static/css/main.0a0d68ca.css",
+    "main.js": "/odin-shopping-cart/static/js/main.18957fa4.js",
+    "static/media/cute_anime_boy.png": "/odin-shopping-cart/static/media/cute_anime_boy.c7ac324d682c784e56e8.png",
+    "static/media/trashman.jpg": "/odin-shopping-cart/static/media/trashman.bb0a9fd4e706cfde19aa.jpg",
+    "static/media/fish.jpg": "/odin-shopping-cart/static/media/fish.02a78bc70db731806a57.jpg",
+    "index.html": "/odin-shopping-cart/index.html",
+    "static/media/cart-variant.svg": "/odin-shopping-cart/static/media/cart-variant.4350e3df540c25223d9fb315e4f4a23e.svg",
+    "main.0a0d68ca.css.map": "/odin-shopping-cart/static/css/main.0a0d68ca.css.map",
+    "main.18957fa4.js.map": "/odin-shopping-cart/static/js/main.18957fa4.js.map"
   },
   "entrypoints": [
     "static/css/main.0a0d68ca.css",
-    "static/js/main.177d5839.js"
+    "static/js/main.18957fa4.js"
   ]
 }

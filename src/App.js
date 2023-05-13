@@ -66,11 +66,11 @@ export default function App() {
   }
 
   return (
-    <HashRouter>
+    <HashRouter basename='/'>
       <Nav list={list} total={total}/>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop list={list} changeAmount={changeAmount} />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/shop' element={<Shop list={list} changeAmount={changeAmount} />} />
       </Routes>
     </HashRouter>
   );

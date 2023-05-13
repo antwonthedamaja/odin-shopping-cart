@@ -1,5 +1,5 @@
 {
-  "name": "odin-shopping-carts",
+  "name": "odin-shopping-cart",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,5 +45,5 @@
     "eslint-plugin-react": "^7.32.2",
     "gh-pages": "^5.0.0"
   },
-  "homepage": "http://antwonthedamaja.github.io/odin-shopping-carts"
+  "homepage": "http://antwonthedamaja.github.io/odin-shopping-cart"
 }
